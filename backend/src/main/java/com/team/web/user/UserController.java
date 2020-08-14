@@ -16,9 +16,11 @@ public class UserController {
     @Autowired
     UserService userService;
     @Autowired UserRepository userRepository;
+
     // 아이디 중복 확인
     @GetMapping("/checkId/{userId}")
     public ResponseEntity<User> checkId(@PathVariable String userId) {
+        //Optional null 값이 있을때 오류가 안나게 해주기 떄문에 사용
         Optional<User> checkIdResult = userService.findUserByUserId(userId);
         if (checkIdResult.isPresent()) {
             return ResponseEntity.ok().build();
