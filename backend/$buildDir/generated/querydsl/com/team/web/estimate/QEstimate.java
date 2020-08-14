@@ -19,6 +19,8 @@ public class QEstimate extends EntityPathBase<Estimate> {
 
     public static final QEstimate estimate = new QEstimate("estimate");
 
+    public final NumberPath<Long> id = createNumber("id", Long.class);
+
     public final DatePath<java.time.LocalDate> movingDate = createDate("movingDate", java.time.LocalDate.class);
 
     public final StringPath movingFrom = createString("movingFrom");
@@ -26,6 +28,10 @@ public class QEstimate extends EntityPathBase<Estimate> {
     public final StringPath movingTo = createString("movingTo");
 
     public final StringPath movingType = createString("movingType");
+
+    public final StringPath name = createString("name");
+
+    public final StringPath phoneNumber = createString("phoneNumber");
 
     public final NumberPath<Integer> square = createNumber("square", Integer.class);
 

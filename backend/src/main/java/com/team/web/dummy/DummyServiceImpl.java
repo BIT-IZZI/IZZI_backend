@@ -29,6 +29,7 @@ public class DummyServiceImpl  implements  DummyService{
             estimate.setPhoneNumber(RandomEstimatesGenerator.generateRandomPhone() +
                     RandomEstimatesGenerator.generateRandomPhoneNo()+RandomEstimatesGenerator.generateRandomPhoneNo());
             estimate.setName(RandomEstimatesGenerator.generateRandomName());
+            estimate.setMovingFrom(RandomEstimatesGenerator.generateRandomAddress());
             estimateList.add(estimate);
         }
         return estimateRepository.saveAll(estimateList);
