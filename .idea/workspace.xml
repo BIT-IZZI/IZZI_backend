@@ -2,52 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c81bd1f6-2f43-46ef-b5fa-4bdec7bd5623" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/realTeam.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/article/QArticle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/estimate/QEstimate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/statistics/QStatistics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/user/QUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/CorsConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/QuerydslConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/ServletInitializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/WebApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/Estimate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/Statistics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserRepositoryImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/Article.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/Statistics.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/User.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/user_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/team/web/WebApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/querydsl/com/team/web/article/QArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/querydsl/com/team/web/article/QArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/querydsl/com/team/web/board/QBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/querydsl/com/team/web/board/QBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/querydsl/com/team/web/izzifile/QIzziFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/querydsl/com/team/web/izzifile/QIzziFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/querydsl/com/team/web/order/QOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/querydsl/com/team/web/order/QOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/querydsl/com/team/web/statistics/QStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/querydsl/com/team/web/statistics/QStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/querydsl/com/team/web/user/QUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/querydsl/com/team/web/user/QUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +28,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="web" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="web" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="web" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -92,6 +69,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="dynamic.classpath" value="true" />
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -112,6 +90,25 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WebApplication">
+    <configuration name="IzzI_backend [compileQuerydslJava]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileQuerydslJava" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Tests in 'web'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -159,6 +156,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.IzzI_backend [compileQuerydslJava]" />
         <item itemvalue="Gradle.backend [compileQuerydsl]" />
         <item itemvalue="Gradle.Tests in 'web'" />
       </list>
@@ -176,6 +174,7 @@
       <updated>1597369533457</updated>
       <workItem from="1597369537281" duration="20295000" />
       <workItem from="1597397038304" duration="9000" />
+      <workItem from="1597406793100" duration="188000" />
     </task>
     <servers />
   </component>
@@ -183,9 +182,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="534" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597372421717">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="356" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597406910295">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="356" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1597406910295" />
     <state x="534" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597372421717" />
     <state x="452" y="174" key="#com.intellij.ide.util.MemberChooser" timestamp="1597394358796">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -199,21 +199,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="555" y="256" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597390018491" />
-    <state width="1853" height="790" key="GridCell.Tab.0.bottom" timestamp="1597396412019">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="40" key="GridCell.Tab.0.bottom" timestamp="1597406942230">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597406942230" />
     <state width="1853" height="790" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412019" />
-    <state width="1853" height="790" key="GridCell.Tab.0.center" timestamp="1597396412018">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="40" key="GridCell.Tab.0.center" timestamp="1597406942230">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597406942230" />
     <state width="1853" height="790" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412018" />
-    <state width="1853" height="790" key="GridCell.Tab.0.left" timestamp="1597396412018">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="40" key="GridCell.Tab.0.left" timestamp="1597406942230">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597406942230" />
     <state width="1853" height="790" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412018" />
-    <state width="1853" height="790" key="GridCell.Tab.0.right" timestamp="1597396412018">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1237" height="40" key="GridCell.Tab.0.right" timestamp="1597406942230">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="40" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597406942230" />
     <state width="1853" height="790" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412018" />
     <state width="1853" height="790" key="GridCell.Tab.1.bottom" timestamp="1597396412019">
       <screen x="0" y="0" width="1920" height="1040" />
