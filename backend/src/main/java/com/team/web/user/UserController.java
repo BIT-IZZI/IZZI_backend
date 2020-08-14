@@ -15,7 +15,8 @@ import java.util.Optional;
 public class UserController {
     @Autowired
     UserService userService;
-
+    @Autowired UserRepository userRepository;
+    // 아이디 중복 확인
     @GetMapping("/checkId/{userId}")
     public ResponseEntity<User> checkId(@PathVariable String userId) {
         Optional<User> checkIdResult = userService.findUserByUserId(userId);
@@ -50,7 +51,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    //아이디 찾기
     @GetMapping("/findId")
     public ResponseEntity<User> findId(@RequestParam String name, @RequestParam String email) {
         Optional<User> findUser = userService.findUserByNameAndEmail(name, email);
@@ -60,6 +61,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
+    // 비밀번호 아이디,이메일,이름으로 찾기
     @GetMapping("/findPassword")
     public ResponseEntity<User> checkUserForResetPassword(@RequestParam String userId,
                                                           @RequestParam String email,
@@ -67,6 +69,7 @@ public class UserController {
         Optional<User> findUser= userService.findUserForResetPassword(userId,name,email);
         return findUser.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
+    // 비밀번호 수정
     @PatchMapping("/{id}")
     public ResponseEntity<User> updatePassword(@PathVariable String id, @RequestBody User user){
         System.out.println(id);
@@ -78,6 +81,32 @@ public class UserController {
         }else{
             return ResponseEntity.notFound().build();
         }
+    }
+    //회원 정보 변경
+    @PatchMapping("/modify/{userId}")
+    public ResponseEntity<User> modify(@PathVariable String userId, @RequestBody User user){
+        Optional<User> modifyUser = userService.findUserByUserId(user.getUserId());
+        if (modifyUser.isPresent()) {
+          User selectUser = modifyUser.get();
+          Optional.ofNullable(user.getPassword()).ifPresent(selectUser::setPassword);
+          Optional.ofNullable(user.getEmail()).ifPresent(selectUser::setEmail);
+          Optional.ofNullable(user.getPhoneNumber()).ifPresent(selectUser::setPhoneNumber);
+          return ResponseEntity.ok(userService.update(selectUser));
+        }else {
+            System.out.println("업데이트 실패");
+            return ResponseEntity.notFound().build();
+        }
+    }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<User> deleteUser(@PathVariable String id){
+            Optional<User> findUser= userService.findUser(Long.valueOf(id));
+            if(findUser.isPresent()){
+                User selectUser = findUser.get();
+                userService.delete(selectUser);
+                return ResponseEntity.ok().build();
+            }else {
+                return ResponseEntity.notFound().build();
+            }
     }
 
 }

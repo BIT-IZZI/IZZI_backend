@@ -19,6 +19,8 @@ import java.util.Optional;
     Optional<User> findUser(Long id);
 
     User update(User selectUser);
+
+    void delete(User selectUser);
 }
 @Service
 public class UserServiceImpl implements UserService {
@@ -69,5 +71,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User update(User selectUser) {
         return userRepository.save(selectUser);
+    }
+
+    @Override
+    public void delete(User selectUser) {
+        userRepository.delete(selectUser);
     }
 }
