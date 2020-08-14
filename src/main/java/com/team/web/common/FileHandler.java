@@ -108,7 +108,7 @@ import lombok.Data;
         return names;
     }
     public String getFolder() {
-        return "izzy";
+        return "izzifileFolder";
     }
     public File makeDir(String t, String u) {
         BiFunction<String,String, File> f = File::new;

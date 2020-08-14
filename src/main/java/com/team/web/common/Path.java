@@ -7,7 +7,7 @@ public enum Path {
         String result = "";
         switch(this) {
             case UPLOAD_PATH:
-                result = "C:\\Users\\bit\\Documents\\backend\\src\\main\\resources\\static\\images\\";
+                result = "C:\\Users\\user\\Documents\\IzzI_backend\\src\\main\\resources\\static\\images\\";
                 break;
 
         }

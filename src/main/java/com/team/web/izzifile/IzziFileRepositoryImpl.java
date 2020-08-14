@@ -3,7 +3,7 @@ package com.team.web.izzifile;
 import org.springframework.stereotype.Repository;
 
 
-interface IIzzyFileRepository{}
+interface IIzziFileRepository{}
 @Repository
-class IzziFileRepositoryImpl implements IIzzyFileRepository {
+class IzziFileRepositoryImpl implements IIzziFileRepository {
 }

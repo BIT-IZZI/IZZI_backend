@@ -23,12 +23,13 @@ public class IzziFileController {
     @Autowired
     FileHandler fileHandler;
     @Autowired IzziFileServiceImpl izziFileServiceImpl;
-    @Autowired IzziFile file;
-    private final IzziFileRepository izzyFileRepository;
+/*    @Autowired IzziFile file;*/
+    private final IzziFileRepository izziFileRepository;
 
     @PostMapping("/imageUpload/{uploadId}")
     public String uploadedImageFiles(@RequestParam("file") MultipartFile mfile, @PathVariable String uploadId) {
         logger.info("이미지 업로드 접속 성공 :: "+ uploadId);
+        IzziFile file = new IzziFile();
         file.setUploadId(uploadId);
         String uploadFolder = Path.UPLOAD_PATH.toString();
         fileHandler.uploadImageFile(mfile, uploadFolder);
@@ -36,6 +37,8 @@ public class IzziFileController {
         c.accept(file);
         return "파일 업로드 성공 !!";
     }
+
+
 
 
 
