@@ -1,45 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26814b93-eb37-4e10-83ae-ba361ef07070" name="Default Changelist" comment="" />
+    <list default="true" id="c81bd1f6-2f43-46ef-b5fa-4bdec7bd5623" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/realTeam.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/article/QArticle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/estimate/QEstimate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/statistics/QStatistics.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/$buildDir/generated/querydsl/com/team/web/user/QUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/QuerydslConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/WebApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/Article.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/article/ArticleServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/Estimate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/estimate/EstimateServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/Statistics.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/statistics/StatisticsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/team/web/user/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/Article.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/Statistics.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/User.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/user_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/team/web/WebApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1fo1V3ixdx7NIzAKjOIDrf9GfYZ" />
+  <component name="ProjectId" id="1g4Mhvf9uVpHRebgRIvDZDwyRxK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dynamic.classpath" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bit\Documents\backend\src\main\java\com\team\web" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebApplication">
+    <configuration name="Tests in 'web'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="backend [compileQuerydsl]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="compileQuerydsl" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="WebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.team.web.WebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.backend [compileQuerydsl]" />
+        <item itemvalue="Gradle.Tests in 'web'" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="26814b93-eb37-4e10-83ae-ba361ef07070" name="Default Changelist" comment="" />
-      <created>1596869651920</created>
+      <changelist id="c81bd1f6-2f43-46ef-b5fa-4bdec7bd5623" name="Default Changelist" comment="" />
+      <created>1597369533457</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1596869651920</updated>
-      <workItem from="1596869655504" duration="40000" />
+      <updated>1597369533457</updated>
+      <workItem from="1597369537281" duration="20295000" />
+      <workItem from="1597397038304" duration="9000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1596869699685">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="534" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597372421717">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596869699685" />
+    <state x="534" y="159" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597372421717" />
+    <state x="452" y="174" key="#com.intellij.ide.util.MemberChooser" timestamp="1597394358796">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="174" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1597394358796" />
+    <state x="633" y="338" width="656" height="385" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597393866894">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="633" y="338" width="656" height="385" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1597393866894" />
+    <state x="555" y="256" key="FileChooserDialogImpl" timestamp="1597390018491">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="256" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597390018491" />
+    <state width="1853" height="790" key="GridCell.Tab.0.bottom" timestamp="1597396412019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412019" />
+    <state width="1853" height="790" key="GridCell.Tab.0.center" timestamp="1597396412018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412018" />
+    <state width="1853" height="790" key="GridCell.Tab.0.left" timestamp="1597396412018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412018" />
+    <state width="1853" height="790" key="GridCell.Tab.0.right" timestamp="1597396412018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412018" />
+    <state width="1853" height="790" key="GridCell.Tab.1.bottom" timestamp="1597396412019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412019" />
+    <state width="1853" height="790" key="GridCell.Tab.1.center" timestamp="1597396412019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412019" />
+    <state width="1853" height="790" key="GridCell.Tab.1.left" timestamp="1597396412019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412019" />
+    <state width="1853" height="790" key="GridCell.Tab.1.right" timestamp="1597396412019">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1853" height="790" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597396412019" />
+    <state x="218" y="0" key="SettingsEditor" timestamp="1597372584582">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="218" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597372584582" />
+    <state x="810" y="364" width="470" height="352" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1597395815263">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="810" y="364" width="470" height="352" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1597395815263" />
+    <state x="63" y="117" width="834" height="812" key="find.popup" timestamp="1597393816622">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="63" y="117" width="834" height="812" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597393816622" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/team/web/user/User.java</url>
+          <line>29</line>
+          <properties field="joinDate" class="com.team.web.user.User" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
