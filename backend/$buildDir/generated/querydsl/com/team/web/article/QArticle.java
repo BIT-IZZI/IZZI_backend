@@ -23,13 +23,15 @@ public class QArticle extends EntityPathBase<Article> {
 
     public final StringPath comContents = createString("comContents");
 
-    public final StringPath comRegDate = createString("comRegDate");
+    public final DatePath<java.time.LocalDate> comRegDate = createDate("comRegDate", java.time.LocalDate.class);
+
+    public final StringPath comWriter = createString("comWriter");
 
     public final StringPath contents = createString("contents");
 
     public final StringPath image = createString("image");
 
-    public final StringPath regDate = createString("regDate");
+    public final DatePath<java.time.LocalDate> regDate = createDate("regDate", java.time.LocalDate.class);
 
     public final StringPath title = createString("title");
 

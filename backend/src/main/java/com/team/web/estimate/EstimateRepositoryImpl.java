@@ -1,5 +1,7 @@
 package com.team.web.estimate;
 
-interface IEstimateRepository{}
+interface IEstimateRepository{
+
+}
 public class EstimateRepositoryImpl implements IEstimateRepository {
 }

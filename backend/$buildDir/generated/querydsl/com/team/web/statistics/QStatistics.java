@@ -21,15 +21,19 @@ public class QStatistics extends EntityPathBase<Statistics> {
 
     public final StringPath dailyProfit = createString("dailyProfit");
 
+    public final StringPath dailyVisit = createString("dailyVisit");
+
     public final NumberPath<Long> keyId = createNumber("keyId", Long.class);
 
     public final StringPath monthlyProfit = createString("monthlyProfit");
 
+    public final StringPath monthlyVisit = createString("monthlyVisit");
+
     public final StringPath pattern = createString("pattern");
 
-    public final StringPath visit = createString("visit");
-
     public final StringPath yearlyProfit = createString("yearlyProfit");
+
+    public final StringPath yearlyVisit = createString("yearlyVisit");
 
     public QStatistics(String variable) {
         super(Statistics.class, forVariable(variable));
