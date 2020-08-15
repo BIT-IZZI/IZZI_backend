@@ -63,7 +63,7 @@ public class RandomEstimatesGenerator {
         return randomJoinDate;
     }
     public static String generateRandomPhone() {
-        List<String> phoneNumber = Arrays.asList("010","011","012","013");
+        List<String> phoneNumber = Arrays.asList("010","011");
         Collections.shuffle(phoneNumber);
         return phoneNumber.get(0);
     }

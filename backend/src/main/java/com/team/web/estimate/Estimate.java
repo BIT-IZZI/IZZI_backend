@@ -18,7 +18,7 @@ public class Estimate {
     private Long id;
     @Column(name= "moving_type") private String movingType;
     @Column (name="moving_date") private LocalDate movingDate;
-    @Column (name="square") private Integer square;
+    @Column (name="square") private String square;
     @Column (name="moving_to") private String movingTo;
     @Column (name="moving_from") private String movingFrom;
     @Column (name="phoneNumber") private String phoneNumber;

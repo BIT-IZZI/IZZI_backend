@@ -33,7 +33,7 @@ public class QEstimate extends EntityPathBase<Estimate> {
 
     public final StringPath phoneNumber = createString("phoneNumber");
 
-    public final NumberPath<Integer> square = createNumber("square", Integer.class);
+    public final StringPath square = createString("square");
 
     public QEstimate(String variable) {
         super(Estimate.class, forVariable(variable));

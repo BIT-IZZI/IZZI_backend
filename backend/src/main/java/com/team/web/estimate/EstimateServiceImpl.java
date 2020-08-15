@@ -14,6 +14,7 @@ public class EstimateServiceImpl implements EstimateService{
     public EstimateServiceImpl(EstimateRepository estimateRepository){
         this.estimateRepository = estimateRepository;
     }
+
     @Override
     public Iterable<Estimate> findAll() {
         return estimateRepository.findAll();
