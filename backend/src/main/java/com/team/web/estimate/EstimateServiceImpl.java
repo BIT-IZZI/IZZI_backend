@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 
 @Component
 interface EstimateService extends JpaService<Estimate> {
+
+    Iterable<Estimate> findUserByName();
 }
 @Service
 public class EstimateServiceImpl implements EstimateService{
@@ -18,5 +20,10 @@ public class EstimateServiceImpl implements EstimateService{
     @Override
     public Iterable<Estimate> findAll() {
         return estimateRepository.findAll();
+    }
+
+    @Override
+    public Iterable<Estimate> findUserByName() {
+        return null;
     }
 }

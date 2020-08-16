@@ -53,7 +53,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
-    //아이디 찾기
+    //아이디 이름,이메일로 찾기
     @GetMapping("/findId")
     public ResponseEntity<User> findId(@RequestParam String name, @RequestParam String email) {
         Optional<User> findUser = userService.findUserByNameAndEmail(name, email);
@@ -63,7 +63,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
-    // 비밀번호 아이디,이메일,이름으로 찾기
+    // 비밀번호를 아이디,이메일,이름으로 찾기
     @GetMapping("/findPassword")
     public ResponseEntity<User> checkUserForResetPassword(@RequestParam String userId,
                                                           @RequestParam String email,
