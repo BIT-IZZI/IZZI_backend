@@ -1,7 +1,8 @@
 package com.team.web.izzifile;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-
-interface IzziFileRepository extends JpaRepository<IzziFile, Long>, IIzziFileRepository {
+@Repository
+interface IzziFileRepository extends JpaRepository<IzziFileDB, String> {
 }

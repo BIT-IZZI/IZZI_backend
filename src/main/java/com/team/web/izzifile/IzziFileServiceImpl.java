@@ -1,4 +1,5 @@
 package com.team.web.izzifile;
+/*
 
 import com.team.web.StorageConfigure;
 import org.springframework.core.io.Resource;
@@ -119,5 +120,39 @@ public class IzziFileServiceImpl  implements IIzziFileservice{
     @Override
     public void save(IzziFile file) {
         izziFileRepository.save(file);
+    }
+}
+*/
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.team.web.izzifile.IzziFileDB;
+import com.team.web.izzifile.IzziFileRepository;
+import java.io.IOException;
+import java.util.stream.Stream;
+
+@Service
+public class IzziFileServiceImpl {
+
+    @Autowired
+    private IzziFileRepository fileRepository;
+
+    public IzziFileDB store(MultipartFile file) throws IOException {
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        IzziFileDB FileDB = new IzziFileDB(fileName, file.getContentType(), file.getBytes());
+
+        return fileRepository.save(FileDB);
+    }
+
+    public IzziFileDB getFile(String id) {
+        return fileRepository.findById(id).get();
+    }
+
+    public Stream<IzziFileDB> getAllFiles() {
+        return fileRepository.findAll().stream();
     }
 }
