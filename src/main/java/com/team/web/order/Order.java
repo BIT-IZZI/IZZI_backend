@@ -27,7 +27,10 @@ public class Order {
     @Column (name="moving_from") private String movingFrom;
     @Column (name="moving_phone") private String movingPhone;
     @Column (name="moving_name") private String movingName;
+    @Column (name="optional_addr_to") private String optionalAddrTo;
+    @Column (name="optional_addr_from") private String optionalAddrFrom;
 
+a
     @Builder
     private Order(LocalDate orderDate,
                   String movingPrice,
@@ -38,7 +41,14 @@ public class Order {
                   LocalDate movingDate,
                   Integer square,
                   String movingTo,
-                  String movingFrom, String movingName, String movingPhone){
+                  String movingFrom,
+                  String movingName,
+                  String movingPhone,
+                    String optionalAddrTo,
+                  String optionalAddrFrom
+                  ){
+    this.optionalAddrFrom=optionalAddrFrom;
+    this.optionalAddrTo=optionalAddrTo;
         this.movingType= movingType;
         this.movingDate= movingDate;
         this.square= square;
