@@ -4,10 +4,12 @@ import com.team.web.common.JpaService;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Component
 interface EstimateService extends JpaService<Estimate> {
 
-    Iterable<Estimate> findUserByName();
+
 }
 @Service
 public class EstimateServiceImpl implements EstimateService{
@@ -23,7 +25,9 @@ public class EstimateServiceImpl implements EstimateService{
     }
 
     @Override
-    public Iterable<Estimate> findUserByName() {
-        return null;
+    public Optional<Estimate> findById(String id) {
+        return estimateRepository.findById(Long.valueOf(id));
     }
+
+
 }

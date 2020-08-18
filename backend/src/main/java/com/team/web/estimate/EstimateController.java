@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*",allowedHeaders = "*")
 @RestController
@@ -21,16 +22,14 @@ public class EstimateController {
 
     @GetMapping("/list")
     public Map<?,?> getAll(){
-        logger.info("list()");
         Iterable<Estimate> estimateList = estimateService.findAll();
         box.put("list",estimateList);
         return box.get();
     }
-    @GetMapping("/findUser")
-    public Map<?,?> findUserByName(@PathVariable String name){
-        logger.info("findUser()");
-        Iterable<Estimate> estimateList= estimateService.findUserByName();
-        box.put("findUser",estimateList);
-        return box.get();
+    @GetMapping("/findUser/{id}")
+    public Optional<Estimate> getOneUser(@PathVariable String id){
+        System.out.println("자바확인" +id);
+        return estimateService.findById(id);
+
     }
 }
