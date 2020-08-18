@@ -30,7 +30,7 @@ public class Order {
     @Column (name="optional_addr_to") private String optionalAddrTo;
     @Column (name="optional_addr_from") private String optionalAddrFrom;
 
-a
+
     @Builder
     private Order(LocalDate orderDate,
                   String movingPrice,

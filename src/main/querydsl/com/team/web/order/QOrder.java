@@ -33,6 +33,10 @@ public class QOrder extends EntityPathBase<Order> {
 
     public final StringPath movingType = createString("movingType");
 
+    public final StringPath optionalAddrFrom = createString("optionalAddrFrom");
+
+    public final StringPath optionalAddrTo = createString("optionalAddrTo");
+
     public final DatePath<java.time.LocalDate> orderDate = createDate("orderDate", java.time.LocalDate.class);
 
     public final NumberPath<Long> orderId = createNumber("orderId", Long.class);
