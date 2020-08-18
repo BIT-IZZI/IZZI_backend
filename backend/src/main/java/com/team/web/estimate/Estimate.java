@@ -1,7 +1,6 @@
 package com.team.web.estimate;
 
 import lombok.*;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -21,6 +20,6 @@ public class Estimate {
     @Column (name="square") private String square;
     @Column (name="moving_to") private String movingTo;
     @Column (name="moving_from") private String movingFrom;
-    @Column (name="phoneNumber") private String phoneNumber;
+    @Column (name="phone_number") private String phoneNumber;
     @Column (name="name") private String name;
 }

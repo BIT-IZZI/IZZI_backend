@@ -8,5 +8,5 @@ CREATE TABLE estimate
     `moving_date`    VARCHAR(45)    ,
     `phone_number` VARCHAR(45) ,
     `name` VARCHAR(45) ,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
 );

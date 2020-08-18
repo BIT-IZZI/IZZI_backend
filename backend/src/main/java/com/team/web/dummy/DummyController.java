@@ -1,6 +1,7 @@
 package com.team.web.dummy;
 
 import com.team.web.estimate.Estimate;
+import com.team.web.order.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,9 +15,9 @@ import java.util.List;
 public class DummyController {
     @Autowired DummyService dummyService;
 
-    @PostMapping("/estimate")
-    public ResponseEntity<List<Estimate>> createRandomEstimate(){
-        List<Estimate> randomEstimateList= dummyService.createRandomEstimate();
-        return ResponseEntity.ok(randomEstimateList);
+    @PostMapping("/order-list")
+    public ResponseEntity<List<Order>> createRandomOrder(){
+        List<Order> randomOrderList= dummyService.createRandomOrder();
+        return ResponseEntity.ok(randomOrderList);
     }
 }

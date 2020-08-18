@@ -2,6 +2,8 @@ package com.team.web.dummy;
 
 import com.team.web.estimate.Estimate;
 import com.team.web.estimate.EstimateRepository;
+import com.team.web.order.Order;
+import com.team.web.order.OrderRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -11,29 +13,29 @@ import java.util.List;
 @Component
 interface DummyService{
 
-    List<Estimate> createRandomEstimate();
+    List<Order> createRandomOrder();
 }
 @Service
 public class DummyServiceImpl  implements  DummyService{
-    private final EstimateRepository estimateRepository;
-    public DummyServiceImpl(EstimateRepository estimateRepository){
-        this.estimateRepository= estimateRepository;
+    private final OrderRepository orderRepository;
+    public DummyServiceImpl(OrderRepository orderRepository){
+        this.orderRepository= orderRepository;
     }
     @Override
-    public List<Estimate> createRandomEstimate() {
-        List<Estimate> estimateList= new ArrayList<>();
+    public List<Order> createRandomOrder() {
+        List<Order> orderList= new ArrayList<>();
         for(int i=0; i<1000;i++){
-            Estimate estimate= new Estimate();
-            estimate.setMovingType(RandomEstimatesGenerator.generateRandomMovingType());
-            estimate.setMovingDate(RandomEstimatesGenerator.generateRandomJoinDate());
-            estimate.setPhoneNumber(RandomEstimatesGenerator.generateRandomPhone() +
+            Order order= new Order();
+            order.setMovingType(RandomEstimatesGenerator.generateRandomMovingType());
+            order.setMovingDate(RandomEstimatesGenerator.generateRandomJoinDate());
+            order.setPhoneNumber(RandomEstimatesGenerator.generateRandomPhone() +
                     RandomEstimatesGenerator.generateRandomPhoneNo()+RandomEstimatesGenerator.generateRandomPhoneNo());
-            estimate.setSquare(RandomEstimatesGenerator.generateRandomSquare());
-            estimate.setName(RandomEstimatesGenerator.generateRandomName());
-            estimate.setMovingFrom(RandomEstimatesGenerator.generateRandomAddress());
-            estimate.setMovingTo(RandomEstimatesGenerator.generateRandomAddress());
-            estimateList.add(estimate);
+            order.setSquare(RandomEstimatesGenerator.generateRandomSquare());
+            order.setName(RandomEstimatesGenerator.generateRandomName());
+            order.setMovingFrom(RandomEstimatesGenerator.generateRandomAddress());
+            order.setMovingTo(RandomEstimatesGenerator.generateRandomAddress());
+            orderList.add(order);
         }
-        return estimateRepository.saveAll(estimateList);
+        return orderRepository.saveAll(orderList);
     }
 }
