@@ -12,3 +12,7 @@ CREATE TABLE article
     `com_reg_date` VARCHAR(45) NOT NULL,
         PRIMARY KEY (article_id)
 );
+
+
+//수정후
+
