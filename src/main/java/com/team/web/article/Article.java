@@ -1,4 +1,6 @@
 package com.team.web.article;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.team.web.board.Board;
 import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -19,27 +21,9 @@ public class Article {
     @Column(name="com_reg_date" ,nullable=false) private LocalDate  comRegDate;
     @Column(name="com_writer" ,nullable=false) private String  comWriter;
 
-    @Builder
-    private Article(
-                    String title,
-                    String contents,
-                    String writer,
-                    LocalDate regDate,
-                    String image,
-                    String video,
-                    String comContents,
-                    LocalDate comRegDate,
-                    String comWriter
-                    ){
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="board")
+    private Board board;
 
-        this.title= title;
-        this.contents= contents;
-        this.writer= writer;
-        this.regDate= regDate;
-        this.image= image;
-        this.video= video;
-        this.comContents= comContents;
-        this.comRegDate= comRegDate;
-        this.comWriter= comWriter;
-    }
 }

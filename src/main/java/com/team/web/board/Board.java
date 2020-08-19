@@ -1,8 +1,11 @@
 package com.team.web.board;
 
+import com.team.web.article.Article;
+import com.team.web.izzifile.IzziFileDB;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -35,4 +38,9 @@ public class Board {
         this.contact= contact;
 
     }
+    @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
+    private List<Article> articleList;
+    @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
+    private List<IzziFileDB> izziFileDBList;
+
 }
