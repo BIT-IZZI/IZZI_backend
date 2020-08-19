@@ -10,6 +10,14 @@ import java.util.Optional;
 interface ArticleService extends JpaService<Article> {
     Optional<Article> createUsed(Article article);
 
+
+    Article update(Article modifyArticle);
+
+    Optional<Article> findUserByArticleId(Long articleId);
+
+    Optional<Article> findOne(Long articleId);
+
+    void delete(Article deleteOne);
 }
 
 @Service
@@ -33,12 +41,43 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
+    public Article update(Article modifyArticle) {
+        return articleRepository.save(modifyArticle);
+    }
+
+    @Override
+    public Optional<Article> findUserByArticleId(Long articleId) {
+        return articleRepository.findById(articleId);
+    }
+
+    @Override
+    public Optional<Article> findOne(Long articleId) {
+        return articleRepository.findById(articleId);
+    }
+
+    @Override
     public Iterable<Article> findAll() {
         return articleRepository.findAll();
     }
 
     @Override
-    public Optional<Article> findById(String id) {
-        return Optional.empty();
+    public Optional<Article> findById(String articleId) {
+        return articleRepository.findById(Long.valueOf(articleId));
+    }
+
+    @Override
+    public int count() {
+        return 0;
+    }
+
+    @Override
+    public void delete(Article deleteOne) {
+        articleRepository.delete(deleteOne);
+
+    }
+
+    @Override
+    public boolean exists(String id) {
+        return false;
     }
 }

@@ -2,6 +2,9 @@ package com.team.web.article;
 
 import org.springframework.stereotype.Repository;
 
-interface IArticleRepository{}
+import java.util.Optional;
+
+interface IArticleRepository{
+}
 public class ArticleRepositoryImpl implements IArticleRepository {
 }

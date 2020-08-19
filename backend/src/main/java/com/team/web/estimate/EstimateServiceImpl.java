@@ -29,5 +29,16 @@ public class EstimateServiceImpl implements EstimateService{
         return estimateRepository.findById(Long.valueOf(id));
     }
 
+    @Override
+    public int count() {
+        return 0;
+    }
+
+
+    @Override
+    public boolean exists(String id) {
+        return false;
+    }
+
 
 }

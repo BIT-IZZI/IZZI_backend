@@ -28,4 +28,15 @@ public class OrderServiceImpl implements OrderService {
     public Optional<Order> findById(String id) {
         return orderRepository.findById(Long.valueOf(id));
     }
+
+    @Override
+    public int count() {
+        return 0;
+    }
+
+
+    @Override
+    public boolean exists(String id) {
+        return false;
+    }
 }
