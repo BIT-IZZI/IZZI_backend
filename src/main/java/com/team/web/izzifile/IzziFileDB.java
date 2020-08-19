@@ -39,7 +39,6 @@ public class IzziFileDB {
    *//*     this.uploadId=uploadId;*//*
 
     }*/
-
     public IzziFileDB(){
 
     }

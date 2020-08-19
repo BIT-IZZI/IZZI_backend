@@ -20,10 +20,11 @@ public class Statistics {
     @Column(name="yearly_profit") private String yearlyProfit;
     @Column(name="pattern") private String pattern;
     @Column(name="rain") private int rain;
+    @Column(name="pb_rain") private float pbRain;
 
 
     @Builder
-    private Statistics(Long keyId,
+    private Statistics(float pbRain,
                        double precipitationDaily,
                        String precipitationDate,
                        String precipitationLocation,
@@ -34,7 +35,7 @@ public class Statistics {
                        String pattern,
                        int rain
                        ){
-        this.keyId=keyId;
+        this.pbRain=pbRain;
         this.precipitationDaily=precipitationDaily;
         this.precipitationDate=precipitationDate;
         this.precipitationLocation=precipitationLocation;

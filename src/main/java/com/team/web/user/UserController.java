@@ -1,9 +1,7 @@
 package com.team.web.user;
 
-import org.apache.catalina.realm.UserDatabaseRealm;
-import org.springframework.beans.factory.ObjectProvider;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

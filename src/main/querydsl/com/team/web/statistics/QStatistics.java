@@ -27,6 +27,8 @@ public class QStatistics extends EntityPathBase<Statistics> {
 
     public final StringPath pattern = createString("pattern");
 
+    public final NumberPath<Float> pbRain = createNumber("pbRain", Float.class);
+
     public final NumberPath<Double> precipitationDaily = createNumber("precipitationDaily", Double.class);
 
     public final StringPath precipitationDate = createString("precipitationDate");
