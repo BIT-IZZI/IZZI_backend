@@ -1,5 +1,6 @@
 package com.team.web.statistics;
 
+import com.team.web.user.User;
 import lombok.*;
 
 import javax.persistence.*;
@@ -46,5 +47,7 @@ public class Statistics {
         this.precipitationYear=precipitationYear;
         this.rain=rain;
     }
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id")
+    private User user;
 }

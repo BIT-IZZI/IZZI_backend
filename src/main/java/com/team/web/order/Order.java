@@ -1,8 +1,11 @@
 package com.team.web.order;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.team.web.izzifile.IzziFileDB;
+import com.team.web.user.User;
 import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Getter
@@ -29,6 +32,9 @@ public class Order {
     @Column (name="moving_name") private String movingName;
     @Column (name="optional_addr_to") private String optionalAddrTo;
     @Column (name="optional_addr_from") private String optionalAddrFrom;
+    @Column (name="moving_writer") private String movingWriter;
+    @Column (name="moving_detail") private String movingDetail;
+
 
 
     @Builder
@@ -44,11 +50,13 @@ public class Order {
                   String movingFrom,
                   String movingName,
                   String movingPhone,
-                    String optionalAddrTo,
-                  String optionalAddrFrom
-                  ){
-    this.optionalAddrFrom=optionalAddrFrom;
-    this.optionalAddrTo=optionalAddrTo;
+                  String optionalAddrTo,
+                  String optionalAddrFrom,
+                  String movingWriter,
+                  String movingDetail
+    ){
+        this.optionalAddrFrom=optionalAddrFrom;
+        this.optionalAddrTo=optionalAddrTo;
         this.movingType= movingType;
         this.movingDate= movingDate;
         this.square= square;
@@ -61,7 +69,17 @@ public class Order {
         this.paymentStatus=paymentStatus;
         this.paymentMethod=paymentMethod;
         this.paymentDate=paymentDate;
+        this.movingWriter=movingWriter;
+        this.movingDetail=movingDetail;
 
 
     }
-}
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<IzziFileDB> izziFileDBList;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id")
+    private User user;
+
+    }
+

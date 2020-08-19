@@ -5,29 +5,36 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @CrossOrigin(origins = "*",allowedHeaders = "*")
 @RestController
 @RequestMapping("/statistics")
 public class StatisticsController {
 
-    private final StatisticsRepository statisticsRepository;
+    private final StatisticsService statisticsService;
 
-    public StatisticsController(StatisticsRepository statisticsRepository) {
-        this.statisticsRepository = statisticsRepository;
+    public StatisticsController(StatisticsRepository statisticsRepository, StatisticsService statisticsService) {
+
+        this.statisticsService = statisticsService;
     }
 
-    @GetMapping("/test")
-    public void aVoid () {
-        statisticsRepository.test();
-    }
+//    @GetMapping("/test")
+//    public void aVoid () {
+//        statisticsService.();
+//    }
+//
+//    @GetMapping("/avg")
+//    public void avg(){
+//        System.out.println(statisticsService.avgRain());}
 
-    @GetMapping("/avg")
-    public void avg(){
-        System.out.println(statisticsRepository.avgRain());}
-
-        @GetMapping("/rain")
-    public void rainProb(){
-            System.out.println(statisticsRepository.findStatistics());
+        @GetMapping("/pbRain")
+    public Map<String, List<AvgRainVO>> rainProb(){
+        Map<String, List<AvgRainVO>> result = new HashMap<>();
+        result.put("pbRain", statisticsService.findPbRain());
+        return result;
         }
 
 }

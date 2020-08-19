@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -17,9 +18,15 @@ public class QOrder extends EntityPathBase<Order> {
 
     private static final long serialVersionUID = 1367148976L;
 
+    private static final PathInits INITS = PathInits.DIRECT2;
+
     public static final QOrder order = new QOrder("order1");
 
+    public final ListPath<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB> izziFileDBList = this.<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB>createList("izziFileDBList", com.team.web.izzifile.IzziFileDB.class, com.team.web.izzifile.QIzziFileDB.class, PathInits.DIRECT2);
+
     public final DatePath<java.time.LocalDate> movingDate = createDate("movingDate", java.time.LocalDate.class);
+
+    public final StringPath movingDetail = createString("movingDetail");
 
     public final StringPath movingFrom = createString("movingFrom");
 
@@ -32,6 +39,8 @@ public class QOrder extends EntityPathBase<Order> {
     public final StringPath movingTo = createString("movingTo");
 
     public final StringPath movingType = createString("movingType");
+
+    public final StringPath movingWriter = createString("movingWriter");
 
     public final StringPath optionalAddrFrom = createString("optionalAddrFrom");
 
@@ -49,16 +58,27 @@ public class QOrder extends EntityPathBase<Order> {
 
     public final NumberPath<Integer> square = createNumber("square", Integer.class);
 
+    public final com.team.web.user.QUser user;
+
     public QOrder(String variable) {
-        super(Order.class, forVariable(variable));
+        this(Order.class, forVariable(variable), INITS);
     }
 
     public QOrder(Path<? extends Order> path) {
-        super(path.getType(), path.getMetadata());
+        this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
     }
 
     public QOrder(PathMetadata metadata) {
-        super(Order.class, metadata);
+        this(metadata, PathInits.getFor(metadata, INITS));
+    }
+
+    public QOrder(PathMetadata metadata, PathInits inits) {
+        this(Order.class, metadata, inits);
+    }
+
+    public QOrder(Class<? extends Order> type, PathMetadata metadata, PathInits inits) {
+        super(type, metadata, inits);
+        this.user = inits.isInitialized("user") ? new com.team.web.user.QUser(forProperty("user")) : null;
     }
 
 }

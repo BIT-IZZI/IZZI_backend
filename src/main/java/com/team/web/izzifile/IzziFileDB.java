@@ -1,5 +1,8 @@
 package com.team.web.izzifile;
 
+import com.team.web.board.Board;
+import com.team.web.order.Order;
+import com.team.web.user.User;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.stereotype.Component;
@@ -47,6 +50,13 @@ public class IzziFileDB {
         this.name = name;
         this.data=data;
     }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="order_id")
+    private Order order;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="board_id")
+    private Board board;
 
 
 

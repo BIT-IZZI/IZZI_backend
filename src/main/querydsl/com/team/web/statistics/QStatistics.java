@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -16,6 +17,8 @@ import com.querydsl.core.types.Path;
 public class QStatistics extends EntityPathBase<Statistics> {
 
     private static final long serialVersionUID = 1104848272L;
+
+    private static final PathInits INITS = PathInits.DIRECT2;
 
     public static final QStatistics statistics = new QStatistics("statistics");
 
@@ -39,18 +42,29 @@ public class QStatistics extends EntityPathBase<Statistics> {
 
     public final NumberPath<Integer> rain = createNumber("rain", Integer.class);
 
+    public final com.team.web.user.QUser user;
+
     public final StringPath yearlyProfit = createString("yearlyProfit");
 
     public QStatistics(String variable) {
-        super(Statistics.class, forVariable(variable));
+        this(Statistics.class, forVariable(variable), INITS);
     }
 
     public QStatistics(Path<? extends Statistics> path) {
-        super(path.getType(), path.getMetadata());
+        this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
     }
 
     public QStatistics(PathMetadata metadata) {
-        super(Statistics.class, metadata);
+        this(metadata, PathInits.getFor(metadata, INITS));
+    }
+
+    public QStatistics(PathMetadata metadata, PathInits inits) {
+        this(Statistics.class, metadata, inits);
+    }
+
+    public QStatistics(Class<? extends Statistics> type, PathMetadata metadata, PathInits inits) {
+        super(type, metadata, inits);
+        this.user = inits.isInitialized("user") ? new com.team.web.user.QUser(forProperty("user")) : null;
     }
 
 }

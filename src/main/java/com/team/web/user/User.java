@@ -2,9 +2,14 @@ package com.team.web.user;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.team.web.board.Board;
+import com.team.web.order.Order;
+import com.team.web.statistics.Statistics;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 @NoArgsConstructor(access=AccessLevel.PROTECTED)
@@ -30,6 +35,7 @@ public class User {
     @Column(name = "join_date") private LocalDate joinDate;
     @Column(name = "optional_addr") private String optionalAddr;
     @Column(name = "phone_number") private String phoneNumber;
+
 
     @Builder
     private User(String userId,
@@ -79,4 +85,14 @@ public class User {
     public void setJoinDate(LocalDate joinDate) {
         this.joinDate = joinDate;
     }
+
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Order> orderList;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Statistics> statistics;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Board> board;
+
+
 }

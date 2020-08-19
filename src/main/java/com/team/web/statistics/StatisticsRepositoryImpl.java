@@ -29,6 +29,8 @@ interface IStatisticsRepository{
     Map<?,?> test();
     List<AvgRainVO> avgRain();
     List<AvgRainVO> rainProb();
+
+
 }
 public class StatisticsRepositoryImpl extends QuerydslRepositorySupport implements IStatisticsRepository{
     private final JPAQueryFactory queryFactory;
@@ -78,14 +80,18 @@ public class StatisticsRepositoryImpl extends QuerydslRepositorySupport implemen
  GROUP BY PRECIPITATION_DATE*/
 
   //  @Query("select new com.team.web.statistics(statistic.precipitationDate,SUM (statistic.rain)*100/count(statistic.precipitationDate)as AvgRainVO rainProb) ")
-    @PersistenceContext
-    private EntityManager entityManager;
     public List<AvgRainVO> rainProb() {
-        return null/*queryFactory.select(Projections.fields(AvgRainVO.class,
-                statistics.precipitationDate,
-                (statistics.rain.sum())/(statistics.precipitationDate.count()).as("rainProb")))
-                .from(statistics)
-                .groupBy(statistics.precipitationDate).fetch()*/;
+        return queryFactory.select(Projections.fields(
+                AvgRainVO.class, statistics.precipitationDate, statistics.pbRain.as("rainProb")
+        )).from(statistics).groupBy(statistics.precipitationDate).fetch();
+
+
+
+//        return null/*queryFactory.select(Projections.fields(AvgRainVO.class,
+//                statistics.precipitationDate,
+//                (statistics.rain.sum())/(statistics.precipitationDate.count()).as("rainProb")))
+//                .from(statistics)
+//                .groupBy(statistics.precipitationDate).fetch()*/;
 
     }
 

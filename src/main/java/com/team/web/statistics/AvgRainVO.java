@@ -5,7 +5,8 @@ import lombok.Data;
 @Data
 public class AvgRainVO {
     private String precipitationDate;
-    private double avgRain, rainProb;
+    private double avgRain;
+    private float rainProb;
     private boolean rain;
     private long total;
 }

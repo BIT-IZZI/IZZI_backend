@@ -25,6 +25,9 @@ public class OrderServiceImpl implements OrderService {
         createOrder.setMovingType(order.getMovingType());
         createOrder.setOptionalAddrFrom(order.getOptionalAddrFrom());
         createOrder.setOptionalAddrTo(order.getOptionalAddrTo());
+        createOrder.setMovingDetail(order.getMovingDetail());
+        createOrder.setMovingWriter(order.getMovingWriter());
+        createOrder.setIzziFileDBList(order.getIzziFileDBList());
         System.out.println(createOrder);
 
         Order orderData=orderRepository.save(createOrder);
