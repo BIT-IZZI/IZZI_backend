@@ -22,6 +22,8 @@ public class QArticle extends EntityPathBase<Article> {
 
     public static final QArticle article = new QArticle("article");
 
+    public final StringPath address = createString("address");
+
     public final NumberPath<Long> articleId = createNumber("articleId", Long.class);
 
     public final com.team.web.board.QBoard board;

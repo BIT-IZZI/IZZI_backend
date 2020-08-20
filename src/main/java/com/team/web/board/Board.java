@@ -18,10 +18,10 @@ public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="board_id") private Long boardId;
-    @Column(name="notice", nullable=false) private String  notice;
-    @Column(name="market", nullable=false) private String  market;
-    @Column(name="review" ,nullable=false) private String  review;
-    @Column(name="contact" ,nullable=false) private String  contact;
+    @Column(name="notice") private String  notice;
+    @Column(name="market") private String  market;
+    @Column(name="review" ) private String  review;
+    @Column(name="contact" ) private String  contact;
 
 
     @Builder

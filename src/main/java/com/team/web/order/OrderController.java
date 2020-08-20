@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @CrossOrigin(origins = "*",allowedHeaders = "*")
@@ -16,8 +17,10 @@ public class OrderController {
     OrderRepository orderRepository;
 
     @PostMapping("/esitmateform")
-    public ResponseEntity<Order> estiFirst(@RequestBody Order order){
-        Optional<Order> estiFirst = orderService.estiFirst(order);
+    public ResponseEntity<Order> estiFirst(@RequestBody Order estiJsnon ){
+
+        Optional<Order> estiFirst = orderService.estiFirst(estiJsnon);
+        System.out.println("폼 :"+ estiJsnon.toString());
         if (estiFirst.isPresent()) {
             return ResponseEntity.ok().build();
         } else {

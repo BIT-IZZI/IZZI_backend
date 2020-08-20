@@ -19,7 +19,7 @@ public class Order {
     @Column(name= "order_id")
     private Long orderId;
     @Column (name="order_date") private LocalDate orderDate;
-    @Column(name= "moving_date") private LocalDate movingDate;
+    @Column(name= "moving_date") private String movingDate;
     @Column(name= "moving_type") private String movingType;
     @Column(name= "moving_price") private String movingPrice;
     @Column(name= "payment_status") private String paymentStatus;
@@ -44,7 +44,7 @@ public class Order {
                   String paymentMethod,
                   LocalDate paymentDate,
                   String movingType,
-                  LocalDate movingDate,
+                  String movingDate,
                   Integer square,
                   String movingTo,
                   String movingFrom,

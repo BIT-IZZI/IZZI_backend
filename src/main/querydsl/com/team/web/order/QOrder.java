@@ -24,7 +24,7 @@ public class QOrder extends EntityPathBase<Order> {
 
     public final ListPath<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB> izziFileDBList = this.<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB>createList("izziFileDBList", com.team.web.izzifile.IzziFileDB.class, com.team.web.izzifile.QIzziFileDB.class, PathInits.DIRECT2);
 
-    public final DatePath<java.time.LocalDate> movingDate = createDate("movingDate", java.time.LocalDate.class);
+    public final StringPath movingDate = createString("movingDate");
 
     public final StringPath movingDetail = createString("movingDetail");
 
