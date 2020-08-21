@@ -51,6 +51,12 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -95,10 +101,10 @@ public class IzziFileController {
 
     @GetMapping("/files/{id}")
     public ResponseEntity<byte[]> getFile(@PathVariable String id) {
-        IzziFileDB IzziFile = storageService.getFile(id);
+        IzziFileDB izziFile = storageService.getFile(id);
 
         return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + IzziFile.getName() + "\"")
-                .body(IzziFile.getData());
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + izziFile.getName() + "\"")
+                .body(izziFile.getData());
     }
 }

@@ -22,7 +22,8 @@ public class OrderController {
         Optional<Order> estiFirst = orderService.estiFirst(estiJsnon);
         System.out.println("폼 :"+ estiJsnon.toString());
         if (estiFirst.isPresent()) {
-            return ResponseEntity.ok().build();
+            Order estimateInfo = estiFirst.get();
+            return ResponseEntity.ok(estimateInfo);
         } else {
             return ResponseEntity.badRequest().build();
         }
