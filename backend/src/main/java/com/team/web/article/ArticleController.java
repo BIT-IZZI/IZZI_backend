@@ -2,7 +2,6 @@ package com.team.web.article;
 
 import com.team.web.common.Box;
 import lombok.AllArgsConstructor;
-import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +22,23 @@ public class ArticleController {
     static Logger logger = LoggerFactory.getLogger(ArticleController.class);
    @Autowired Box box;
 
-    @PostMapping("createUsed")
+    @PostMapping("/createUsed")
     public ResponseEntity<Article> createUsed(@RequestBody Article article){
         System.out.println("자바 확인 "+ article);
         Optional<Article> createUsed= articleService.createUsed(article);
         if(createUsed.isPresent()){
             return ResponseEntity.ok().build();
         }else{
+            return ResponseEntity.notFound().build();
+        }
+    }
+    @PostMapping("/createComment")
+    public ResponseEntity<Article> createComment(@RequestBody Article article){
+        System.out.println("자바 댓글 확인" + article);
+        Optional<Article> createComment= articleService.createComment(article);
+        if(createComment.isPresent()){
+            return ResponseEntity.ok().build();
+        }else {
             return ResponseEntity.notFound().build();
         }
     }

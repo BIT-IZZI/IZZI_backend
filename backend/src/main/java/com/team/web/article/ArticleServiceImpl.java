@@ -4,6 +4,8 @@ import com.team.web.common.JpaService;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Optional;
 
 @Component
@@ -18,6 +20,8 @@ interface ArticleService extends JpaService<Article> {
     Optional<Article> findOne(Long articleId);
 
     void delete(Article deleteOne);
+
+    Optional<Article> createComment(Article article);
 }
 
 @Service
@@ -35,9 +39,19 @@ public class ArticleServiceImpl implements ArticleService {
         createUsedArticle.setWriter(article.getWriter());
         createUsedArticle.setAddress(article.getAddress());
         createUsedArticle.setContents(article.getContents());
+        createUsedArticle.setRegDate(LocalDate.now());
         System.out.println(createUsedArticle);
         Article usedData= articleRepository.save(createUsedArticle);
         return Optional.of(usedData);
+    }
+    @Override
+    public Optional<Article> createComment(Article article) {
+       Article createCommentary= new Article();
+       createCommentary.setComWriter(article.getComWriter());
+       createCommentary.setComContents(article.getComContents());
+       createCommentary.setComRegDate(LocalDate.now());
+       Article commentData= articleRepository.save(createCommentary);
+        return Optional.of(commentData);
     }
 
     @Override
@@ -75,6 +89,8 @@ public class ArticleServiceImpl implements ArticleService {
         articleRepository.delete(deleteOne);
 
     }
+
+
 
     @Override
     public boolean exists(String id) {
