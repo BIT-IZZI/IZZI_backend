@@ -79,4 +79,9 @@ public class ArticleServiceImpl implements ArticleService {
     public boolean exists(String id) {
         return false;
     }
+
+    @Override
+    public void delete(String id) {
+
+    }
 }

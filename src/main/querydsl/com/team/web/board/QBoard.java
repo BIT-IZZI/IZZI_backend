@@ -28,7 +28,7 @@ public class QBoard extends EntityPathBase<Board> {
 
     public final StringPath contact = createString("contact");
 
-    public final ListPath<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB> izziFileDBList = this.<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB>createList("izziFileDBList", com.team.web.izzifile.IzziFileDB.class, com.team.web.izzifile.QIzziFileDB.class, PathInits.DIRECT2);
+    public final ListPath<com.team.web.file.File, com.team.web.file.QFile> fileList = this.<com.team.web.file.File, com.team.web.file.QFile>createList("fileList", com.team.web.file.File.class, com.team.web.file.QFile.class, PathInits.DIRECT2);
 
     public final StringPath market = createString("market");
 

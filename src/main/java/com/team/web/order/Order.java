@@ -1,7 +1,8 @@
 package com.team.web.order;
 
+import com.amazonaws.annotation.SdkTestInternalApi;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.team.web.izzifile.IzziFileDB;
+import com.team.web.file.File;
 import com.team.web.user.User;
 import lombok.*;
 
@@ -12,7 +13,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-
+@ToString(exclude = "file")
 @NoArgsConstructor
 @Table(name = "orderlist")
 public class Order {
@@ -53,9 +54,11 @@ public class Order {
     @Column(name = "moving_detail")
     private String movingDetail;
 
+ /*   @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    private List<IzziFileDB> izziFileDBList;*/
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    private List<IzziFileDB> izziFileDBList;
-    @ManyToOne(fetch = FetchType.LAZY)
+    private List<com.team.web.file.File> file;
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 

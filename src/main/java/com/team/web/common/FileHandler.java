@@ -34,6 +34,7 @@ import lombok.Data;
         return file;
     }
 }
+/*
 @Component @Data public class FileHandler extends Proxy{
     private static final Logger logger = LoggerFactory.getLogger(FileHandler.class);
     private Image image;
@@ -109,6 +110,42 @@ import lombok.Data;
     }
     public String getFolder() {
         return "izzifileFolder";
+    }
+    public File makeDir(String t, String u) {
+        BiFunction<String,String, File> f = File::new;
+        return f.apply(t, u);
+    }
+    public File makeFile(File t, String u) {
+        BiFunction<File,String, File> f = File::new;
+        return f.apply(t, u);
+    }
+}
+*/
+@Component @Data public class FileHandler{
+    private static final Logger logger = LoggerFactory.getLogger(FileHandler.class);
+    public void uploadFile(MultipartFile mfile, String uploadFolder) {
+        File uploadPath = makeDir(uploadFolder, getFolder());
+        List<String> names= new ArrayList<String>();
+        if(uploadPath.exists() == false) {
+            uploadPath.mkdirs();
+        }
+        final String folderName = getFolder();
+        String fname = mfile.getOriginalFilename();
+        String extension = fname.substring(fname.lastIndexOf(".")+1);
+        System.out.println(extension);
+        fname = fname.substring(fname.lastIndexOf("\\")+1, fname.lastIndexOf("."));
+        System.out.println(fname);
+        File savedFile = makeFile(uploadPath, fname+"."+extension);
+        names.add(fname+"-"+UUID.randomUUID().toString());
+        try {
+            mfile.transferTo(savedFile);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String getFolder() {
+        return "izzi";
     }
     public File makeDir(String t, String u) {
         BiFunction<String,String, File> f = File::new;

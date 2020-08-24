@@ -7,4 +7,7 @@ public interface JpaService<T> {
     public Optional<T> findById(String id);
     public int count();
     public boolean exists(String id) ;
+    public void delete(String id);
+
+
 }

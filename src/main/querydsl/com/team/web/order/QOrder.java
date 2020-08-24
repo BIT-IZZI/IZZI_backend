@@ -22,7 +22,7 @@ public class QOrder extends EntityPathBase<Order> {
 
     public static final QOrder order = new QOrder("order1");
 
-    public final ListPath<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB> izziFileDBList = this.<com.team.web.izzifile.IzziFileDB, com.team.web.izzifile.QIzziFileDB>createList("izziFileDBList", com.team.web.izzifile.IzziFileDB.class, com.team.web.izzifile.QIzziFileDB.class, PathInits.DIRECT2);
+    public final ListPath<com.team.web.file.File, com.team.web.file.QFile> file = this.<com.team.web.file.File, com.team.web.file.QFile>createList("file", com.team.web.file.File.class, com.team.web.file.QFile.class, PathInits.DIRECT2);
 
     public final StringPath movingDate = createString("movingDate");
 

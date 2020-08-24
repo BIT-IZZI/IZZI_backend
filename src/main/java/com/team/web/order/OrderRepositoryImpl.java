@@ -1,8 +1,7 @@
 package com.team.web.order;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import com.team.web.user.QUser;
-import com.team.web.user.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import org.springframework.stereotype.Repository;

@@ -8,15 +8,15 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import org.springframework.stereotype.Component;
 @Component  public class Proxy {
-    public int integer(String param) {
+  /*  public int integer(String param) {
         Function<String, Integer> f = Integer :: parseInt;
         return f.apply(param);
-    }
+    }*/
     public String string(Object param) {
         Function<Object, String> f = String :: valueOf;
         return f.apply(param);
     }
-    public boolean equals(String p1, String p2) {
+/*    public boolean equals(String p1, String p2) {
         BiPredicate<String, String> b = String :: equals;
         return b.test(p1, p2);
     }
@@ -46,5 +46,5 @@ import org.springframework.stereotype.Component;
     public void print(String t) {
         Consumer<String> c = System.out::print;
         c.accept(t);
-    }
+    }*/
 }

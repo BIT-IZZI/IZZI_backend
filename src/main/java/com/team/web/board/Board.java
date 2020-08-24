@@ -1,7 +1,7 @@
 package com.team.web.board;
 
 import com.team.web.article.Article;
-import com.team.web.izzifile.IzziFileDB;
+import com.team.web.file.File;
 import com.team.web.user.User;
 import lombok.*;
 
@@ -43,7 +43,7 @@ public class Board {
     @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
     private List<Article> articleList;
     @OneToMany(mappedBy = "board", cascade = CascadeType.ALL)
-    private List<IzziFileDB> izziFileDBList;
+    private List<File> fileList;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="user_id")
