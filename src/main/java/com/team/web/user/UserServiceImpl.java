@@ -6,35 +6,27 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Component
-    interface UserService{
-    Optional<User> findUserByUserId(String user);
-
-    Optional<User> signUp(User user);
-
-    Optional<User> findUserByNameAndEmail(String name, String email);
-
-    Optional<User> findUserForResetPassword(String userId, String name, String email);
-
-    Optional<User> findUser(Long id);
-
-    User update(User selectUser);
-
-    void delete(User selectUser);
-}
 @Service
 public class UserServiceImpl implements UserService {
-    @Autowired UserRepository userRepository;
+    @Autowired
+    UserRepository userRepository;
 
     @Override
-    public Optional<User> findUserByUserId(String user) {
-        Optional<User> checkId= userRepository.findByUserId(user);
-        return checkId;
+    public Optional<User> findUserByUserId(String userId) {
+
+        Optional<User> checkId = userRepository.findByUserId(userId);
+        if(checkId.isPresent()) {
+          //  System.out.println(checkId.get());
+            return Optional.of(checkId.get());
+        } else {
+            return Optional.empty();
+        }
+
     }
 
     @Override
     public Optional<User> signUp(User user) {
-        User createUser= new User();
+        User createUser = new User();
         createUser.setUserId(user.getUserId());
         createUser.setPassword(user.getPassword());
         createUser.setName(user.getName());
@@ -45,8 +37,8 @@ public class UserServiceImpl implements UserService {
         createUser.setOptionalAddr(user.getOptionalAddr());
         createUser.setEmail(user.getEmail());
         createUser.setJoinDate(user.getJoinDate());
-        System.out.println(createUser);
-        User userData= userRepository.save(createUser);
+    //    System.out.println(createUser);
+        User userData = userRepository.save(createUser);
 
         return Optional.of(userData); // ???
     }
@@ -59,7 +51,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> findUserForResetPassword(String userId, String name, String email) {
-        Optional<User> findUser = userRepository.findByUserIdNameAndEmail(userId,name,email);
+        Optional<User> findUser = userRepository.findByUserIdNameAndEmail(userId, name, email);
         return findUser;
     }
 
@@ -76,5 +68,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(User selectUser) {
         userRepository.delete(selectUser);
+    }
+
+    @Override
+    public User findUserById(long userId) {
+        Optional<User> findUser = userRepository.findById(userId);
+        if (findUser.isPresent()) {
+            return findUser.get();
+        } else {
+            return null;
+        }
     }
 }

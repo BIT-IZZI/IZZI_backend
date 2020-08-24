@@ -11,8 +11,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    @Autowired
-    UserService userService;
+    @Autowired UserService userService;
     @Autowired UserRepository userRepository;
     // 아이디 중복 확인
     @GetMapping("/checkId/{userId}")
@@ -37,6 +36,7 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<User> login(@RequestBody User user) {
+
         Optional<User> findUser = userService.findUserByUserId(user.getUserId());
         if (findUser.isPresent()) {
             User requestLoginUser = findUser.get();

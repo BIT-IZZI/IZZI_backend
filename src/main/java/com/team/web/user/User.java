@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor(access=AccessLevel.PROTECTED)
 @Getter
 @Setter
-@ToString
+
 @Entity
 @Table(name= "user", uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id"})})
 public class User {
@@ -87,10 +87,13 @@ public class User {
     }
 
 
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Order> orderList;
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Statistics> statistics;
+    @JsonIgnore
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Board> board;
 

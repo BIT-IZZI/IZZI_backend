@@ -23,10 +23,11 @@ public class UserRepositoryImpl  extends QuerydslRepositorySupport implements Cu
     }
     @Override
     public Optional<User> findByUserId(String userId) {
+        System.out.println(userId);
         QUser qUser = QUser.user;
-        User findOne = queryFactory.selectFrom(qUser).where(qUser.userId.eq(userId)).fetchOne();
-
-        return Optional.ofNullable(findOne);
+        User findOne = queryFactory.selectFrom(qUser).where(qUser.userId.like(userId)).fetchOne();
+        System.out.println("repo : " + findOne);
+        return Optional.of(findOne);
     }
 
     @Override
@@ -43,6 +44,4 @@ public class UserRepositoryImpl  extends QuerydslRepositorySupport implements Cu
                 qUser.name.eq(name),qUser.email.eq(email)).fetchOne();
         return Optional.ofNullable(findOne);
     }
-
-
 }
