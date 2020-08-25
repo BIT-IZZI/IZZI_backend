@@ -88,7 +88,7 @@ public class FileController {
 
     @GetMapping("/geturi/{orderId}")
     public List<String>  getURI(@PathVariable Long orderId){
-        System.out.println(orderId);
+        System.out.println("geturi"+orderId);
         return fileService.getFileName(orderId);
     }
 

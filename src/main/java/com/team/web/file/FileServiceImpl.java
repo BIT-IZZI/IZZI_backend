@@ -69,7 +69,7 @@ public class FileServiceImpl implements FileService{
             uris.add(i,newFile.toURI().toString());
 
         }
-        System.out.println(uris.get(0));
+        System.out.println("uris:"+ uris.get(0));
 return uris;
     }
 
