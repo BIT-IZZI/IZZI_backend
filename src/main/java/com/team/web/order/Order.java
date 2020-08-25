@@ -36,7 +36,7 @@ public class Order {
     @Column(name = "payment_date")
     private LocalDate paymentDate;
     @Column(name = "square")
-    private Integer square;
+    private String square;
     @Column(name = "moving_to")
     private String movingTo;
     @Column(name = "moving_from")
@@ -71,7 +71,7 @@ public class Order {
                   LocalDate paymentDate,
                   String movingType,
                   String movingDate,
-                  Integer square,
+                 String square,
                   String movingTo,
                   String movingFrom,
                   String movingName,

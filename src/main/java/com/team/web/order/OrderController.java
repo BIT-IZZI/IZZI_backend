@@ -63,11 +63,26 @@ public class OrderController {
         box.put("list",orderList);
         return box.get();
     }
+
+
     @GetMapping("/findUser/{id}")
     public Optional<Order> getOneUser(@PathVariable String id){
         System.out.println("자바확인 getOneUser");
         return orderService.findById(id);
 
     }
+ /*   @PostMapping("/calculator")
+    public ResponseEntity<Order> estiPrice(@RequestBody Order result) {
+        Optional<Order> estiPrice = orderService.estiPrice(result);
+        System.out.println("자바 들어옴");
+        System.out.println(result.getMovingPrice());
+        if (estiPrice.isPresent()) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
+    }*/
+
+
 }
 

@@ -56,6 +56,7 @@ public class OrderServiceImpl implements OrderService {
         createOrder.setMovingDetail(order.getMovingDetail());
         createOrder.setMovingWriter(order.getMovingWriter());
         createOrder.setSquare(order.getSquare());
+        createOrder.setMovingPrice(order.getMovingPrice());
         createOrder.setUser(user);
         return orderRepository.save(createOrder);
     }
@@ -94,4 +95,12 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.findById(orderId);
     }
 
+   /* @Override
+    public Optional<Order> estiPrice(Order order) {
+        Order createResult = new Order();
+        createResult.setMovingPrice(order.getMovingPrice());
+        createResult.setMovingDate(order.getMovingDate());
+        Order resultData = orderRepository.save(createResult);
+        return Optional.of(resultData);
+    }*/
 }

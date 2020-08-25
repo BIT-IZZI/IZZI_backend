@@ -15,6 +15,8 @@ interface FileService extends JpaService<File> {
     List<File> findBySubjectId(Long subjectId);
 
     List<String>  getFileName(Long orderId);
+
+    List<String> getOnlyFileName(Long orderId);
 }
 @Service
 public class FileServiceImpl implements FileService{
@@ -62,15 +64,19 @@ public class FileServiceImpl implements FileService{
 
     @Override
     public List<String>   getFileName(Long orderId) {
-        List<File> files = fileRepository.getFileName(orderId);
+     /*   List<File> files = fileRepository.getFileName(orderId);
         List<String> uris = new ArrayList<>();
         for (int i =0; i<files.size(); i++){
             java.io.File newFile = new java.io.File(Path.UPLOAD_PATH.toString() + "izzi\\" + files.get(i).getFileName());
             uris.add(i,newFile.toURI().toString());
-
         }
-        System.out.println("uris:"+ uris.get(0));
-return uris;
+        System.out.println("uris:"+ uris.get(0));*/
+return null;
+    }
+
+    @Override
+    public List<String> getOnlyFileName(Long orderId) {
+        return fileRepository.getFileName(orderId);
     }
 
 

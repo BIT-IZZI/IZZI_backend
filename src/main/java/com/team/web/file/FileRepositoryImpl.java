@@ -9,7 +9,7 @@ import java.util.List;
 
 interface IFileRepository {
 
-    List<File> getFileName(Long orderId);
+    List<String> getFileName(Long orderId);
 }
 @Repository
 public class FileRepositoryImpl extends QuerydslRepositorySupport implements IFileRepository {
@@ -22,9 +22,9 @@ public class FileRepositoryImpl extends QuerydslRepositorySupport implements IFi
 
 
     @Override
-    public List<File> getFileName(Long orderId) {
+    public List<String> getFileName(Long orderId) {
         QFile qFile = QFile.file;
         QOrder qOrder = QOrder.order;
-        return from(qFile).leftJoin(qOrder).on(qOrder.orderId.eq(qFile.order.orderId)).select(qFile).where(qOrder.orderId.eq(orderId)).fetch();
+        return from(qFile).leftJoin(qOrder).on(qOrder.orderId.eq(qFile.order.orderId)).select(qFile.fileName).where(qOrder.orderId.eq(orderId)).fetch();
     }
 }

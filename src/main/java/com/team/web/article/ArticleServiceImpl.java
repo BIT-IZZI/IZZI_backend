@@ -3,6 +3,7 @@ import com.team.web.common.JpaService;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Optional;
 
 @Component
@@ -34,6 +35,7 @@ public class ArticleServiceImpl implements ArticleService {
         createUsedArticle.setWriter(article.getWriter());
         createUsedArticle.setAddress(article.getAddress());
         createUsedArticle.setContents(article.getContents());
+        createUsedArticle.setRegDate(LocalDate.now());
         System.out.println(createUsedArticle);
         Article usedData= articleRepository.save(createUsedArticle);
         return Optional.of(usedData);

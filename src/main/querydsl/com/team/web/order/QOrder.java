@@ -56,7 +56,7 @@ public class QOrder extends EntityPathBase<Order> {
 
     public final StringPath paymentStatus = createString("paymentStatus");
 
-    public final NumberPath<Integer> square = createNumber("square", Integer.class);
+    public final StringPath square = createString("square");
 
     public final com.team.web.user.QUser user;
 

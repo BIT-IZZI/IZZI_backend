@@ -91,6 +91,10 @@ public class FileController {
         System.out.println("geturi"+orderId);
         return fileService.getFileName(orderId);
     }
+    @GetMapping("/getfilename/{orderId}")
+    public List<String> getName(@PathVariable Long orderId){
+        return fileService.getOnlyFileName(orderId);
+    }
 
     @GetMapping("/delete/{fileId}")
     public void deleteFile(@PathVariable String fileId){
